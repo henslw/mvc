@@ -1,16 +1,26 @@
-﻿using ContosoUniversity.Models;
+﻿//henslw-mvc3
+//Added using statmants
+using ContosoUniversity.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Microsoft.EntityFrameworkCore;
+using ContosoUniversity.Data;
+using ContosoUniversity.Models.SchoolViewModels;
+using Microsoft.Extensions.Logging;
 
 namespace ContosoUniversity.Controllers
 {
+    //henslw-mvc3
+    //Added a class varible of the database context
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly SchoolContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, SchoolContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
@@ -27,6 +37,21 @@ namespace ContosoUniversity.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        //henslw-mvc3
+        //Added About method
+        //Calculates the number of entities in each group
+        public async Task<ActionResult> About()
+        {
+            IQueryable<EnrollmentDateGroup> data =
+                from student in _context.Students
+                group student by student.EnrollmentDate into dateGroup
+                select new EnrollmentDateGroup()
+                {
+                    EnrollmentDate = dateGroup.Key,
+                    StudentCount = dateGroup.Count()
+                };
+            return View(await data.AsNoTracking().ToListAsync());
         }
     }
 }
