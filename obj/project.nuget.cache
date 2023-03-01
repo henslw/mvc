@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d42Vm+JKC4pAq98HJnx17e0747h6owTbGJqHHErSaMVh7oDMF0uoy4Q8qSjCE6EiL4fq/lF3mRVwVg4+QdyNCQ==",
+  "dgSpecHash": "KeYeyvK6XZ88PqdZQF6M0yCUUlTjy/yV4oLv6VR4EB+YQfoS5ZH44lOxpKKACXlPvqHzWTc7b2umgs2v5koKqQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hensley\\Source\\Repos\\mvc\\ContosoUniversity.csproj",
+  "projectFilePath": "C:\\Users\\Hensley\\source\\repos\\mvc\\ContosoUniversity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hensley\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Hensley\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

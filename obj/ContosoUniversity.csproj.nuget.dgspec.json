@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hensley\\Source\\Repos\\mvc\\ContosoUniversity.csproj": {}
+    "C:\\Users\\Hensley\\source\\repos\\mvc\\ContosoUniversity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hensley\\Source\\Repos\\mvc\\ContosoUniversity.csproj": {
+    "C:\\Users\\Hensley\\source\\repos\\mvc\\ContosoUniversity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hensley\\Source\\Repos\\mvc\\ContosoUniversity.csproj",
+        "projectUniqueName": "C:\\Users\\Hensley\\source\\repos\\mvc\\ContosoUniversity.csproj",
         "projectName": "ContosoUniversity",
-        "projectPath": "C:\\Users\\Hensley\\Source\\Repos\\mvc\\ContosoUniversity.csproj",
+        "projectPath": "C:\\Users\\Hensley\\source\\repos\\mvc\\ContosoUniversity.csproj",
         "packagesPath": "C:\\Users\\Hensley\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hensley\\Source\\Repos\\mvc\\obj\\",
+        "outputPath": "C:\\Users\\Hensley\\source\\repos\\mvc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hensley\\AppData\\Roaming\\NuGet\\NuGet.Config",
