@@ -107,14 +107,14 @@
                 </tr>
             @foreach (var item in Model.Enrollments)
             {
-                        <tr>
-                            <td>
+                <tr>
+                    <td>
                         @item.Student.FullName
-                            </td>
-                            <td>
+                    </td>
+                    <td>
                         @Html.DisplayFor(modelItem => item.Grade)
-                            </td>
-                        </tr>
+                    </td>
+                </tr>
             }
             </table>
     }
