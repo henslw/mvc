@@ -30,17 +30,23 @@ namespace ContosoUniversity.Controllers
         }
 
         // GET: Departments/Details/5
+        //henslw-mvc10
+        // Changed Details method to allow for returning TEntity
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Departments == null)
+
+            if (id == null)
             {
                 return NotFound();
             }
 
+            string query = "SELECT * FROM Department WHERE DepartmentID = {0}";
             var department = await _context.Departments
+                .FromSqlRaw(query, id)
                 .Include(d => d.Administrator)
                 .AsNoTracking()
-                .FirstOrDefaultAsync(m => m.DepartmentID == id);
+                .FirstOrDefaultAsync();
+
             if (department == null)
             {
                 return NotFound();

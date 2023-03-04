@@ -188,10 +188,34 @@ namespace ContosoUniversity.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        //henslw-mvc10
+        //Added Update course HttpGet method
+        public IActionResult UpdateCourseCredits()
+        {
+            return View();
+        }
+
+        //henslw-mvc10
+        //Added Updated course HttpPost method
+        // Had to replace ExecuteSqlCommandAsync with ExecuteSqlRawAsync
+        [HttpPost]
+        public async Task<IActionResult> UpdateCourseCredits(int? multiplier)
+        {
+            if (multiplier != null)
+            {
+                ViewData["RowsAffected"] = 
+                    await _context.Database.ExecuteSqlRawAsync(
+                    "UPDATE Course SET Credits = Credits * {0}",
+                     parameters: multiplier);
+            }
+            return View();
+        }
 
         private bool CourseExists(int id)
         {
           return _context.Courses.Any(e => e.CourseID == id);
         }
+
+
     }
 }
