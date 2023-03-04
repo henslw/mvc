@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hensley\\Source\\Repos\\mvc\\ContosoUniversity.csproj": {}
+    "C:\\Users\\Hensley\\source\\repos\\mvc\\ContosoUniversity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hensley\\Source\\Repos\\mvc\\ContosoUniversity.csproj": {
+    "C:\\Users\\Hensley\\source\\repos\\mvc\\ContosoUniversity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hensley\\Source\\Repos\\mvc\\ContosoUniversity.csproj",
+        "projectUniqueName": "C:\\Users\\Hensley\\source\\repos\\mvc\\ContosoUniversity.csproj",
         "projectName": "ContosoUniversity",
-        "projectPath": "C:\\Users\\Hensley\\Source\\Repos\\mvc\\ContosoUniversity.csproj",
+        "projectPath": "C:\\Users\\Hensley\\source\\repos\\mvc\\ContosoUniversity.csproj",
         "packagesPath": "C:\\Users\\Hensley\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hensley\\Source\\Repos\\mvc\\obj\\",
+        "outputPath": "C:\\Users\\Hensley\\source\\repos\\mvc\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Hensley\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,11 +40,17 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.2, )"
+              "version": "[7.0.3, )"
             },
             "Microsoft.aspnetcore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
@@ -57,11 +58,11 @@
             },
             "microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[7.0.2, )"
+              "version": "[7.0.4, )"
             },
             "microsoft.entityframeworkcore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.2, )"
+              "version": "[7.0.3, )"
             }
           },
           "imports": [
@@ -83,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
